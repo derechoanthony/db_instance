@@ -30,7 +30,7 @@ BEGIN
     VALUES(_first_name,_middle_name,_last_name,_suffix,_nickname,_bdate,_mobile_no,_present_address,_permanent_address,_email,_father_full_name,_mother_full_name,_Beneficiary_full_name,_regCode,_memberKey);   
     INSERT INTO users(profile_id,userName,userPassword)values((SELECT id FROM users_profile WHERE email=_email),_email,_password);
     INSERT INTO user_roles(profile_id,roles_id)values((SELECT id FROM users_profile WHERE email=_email),(select id from roles where name='member'));
-    UPDATE applicationcodes SET count = count - 1 where code = _regCode;
+    UPDATE applicationcodes SET count = count - 1 where key = _regCode;
 END
 
 $function$;
