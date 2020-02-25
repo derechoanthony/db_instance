@@ -8,7 +8,7 @@ CREATE OR REPLACE FUNCTION public.memberprofile(
 	_last_name character varying,
 	_suffix character varying,
 	_nickname character varying,
-	_bdate date,
+	_bdate character varying,
 	_mobile_no character varying,
 	_present_address character varying,
 	_permanent_address character varying,
